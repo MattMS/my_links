@@ -1,0 +1,2 @@
+link=http://localhost:5984/_utils/index.html
+tags=localhost
