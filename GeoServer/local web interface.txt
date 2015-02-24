@@ -1,0 +1,2 @@
+link=http://localhost:8080/geoserver/web/
+tags=localhost
