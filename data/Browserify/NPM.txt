@@ -1,0 +1,2 @@
+link=https://www.npmjs.com/package/browserify
+note=npm install browserify
