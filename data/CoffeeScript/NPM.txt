@@ -1,1 +1,2 @@
 link=https://www.npmjs.com/package/coffee-script
+note=npm install coffee-script
