@@ -1,0 +1,2 @@
+link=https://pypi.python.org/pypi/requests
+tags=pip
