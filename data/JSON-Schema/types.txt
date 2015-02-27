@@ -1,0 +1,1 @@
+link=http://jsonary.com/documentation/json-schema/?section=keywords/General%20keywords
