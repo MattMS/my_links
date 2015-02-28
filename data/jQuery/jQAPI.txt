@@ -1,0 +1,2 @@
+link=http://jqapi.com/
+title=Alternative jQuery Documentation Browser
