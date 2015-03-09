@@ -19,6 +19,23 @@ def split_text(text, sep='='):
 	return (text[:i], text[i + 1:])
 
 
+def get_link_from_file(base_path, full_path):
+	link = None
+	title = None
+
+	logger.debug('Reading file %s', full_path)
+
+	with open(full_path) as r:
+		details = dict([split_text(line.strip()) for line in r])
+
+		link = details.get('link')
+
+		if link is not None:
+			title = get_title_from_file_path(full_path, base_path)
+
+	return (title, link)
+
+
 def get_links_from_files(base_path):
 	all_links = dict()
 
@@ -29,19 +46,14 @@ def get_links_from_files(base_path):
 			if '.txt' == os.path.splitext(file_name)[1]:
 				full_path = os.path.join(parent_path, file_name)
 
-				logger.debug('Reading file %s', full_path)
+				title, link = get_link_from_file(base_path, full_path)
 
-				with open(full_path) as r:
-					details = dict([split_text(line.strip()) for line in r])
+				if title is None or link is None:
+					continue
 
-					link = details.get('link')
+				all_links[title] = link
 
-					if link is not None:
-						title = get_title_from_file_path(full_path, base_path)
-
-						all_links[title] = link
-
-						logger.debug('Added link %s', link)
+				logger.debug('Added link %s', link)
 
 	return all_links
 
@@ -58,4 +70,4 @@ if '__main__' == __name__:
 	all_links = get_links_from_files(data_path)
 
 	with open(json_path, 'w') as w:
-		json.dump(all_links, w)
+		json.dump(dict(links=all_links), w)
