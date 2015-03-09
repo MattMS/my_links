@@ -1,0 +1,2 @@
+#!/bin/sh
+jade --obj data.json index.jade

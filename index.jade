@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(content="IE=edge", http-equiv="X-UA-Compatible")
+		meta(content="Matt McKellar-Spence", name="author")
+		meta(content="Links to sites liked by Matt McKellar-Spence", name="description")
+		meta(content="width=device-width, initial-scale=1", name="viewport")
+		title Links by MattMS
+
+	body
+		.container
+			input#search_inp(name="q")
+
+			ul
+				each link, title in links
+					li: a(href=link)= title
