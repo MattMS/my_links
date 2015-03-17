@@ -62,12 +62,14 @@ if '__main__' == __name__:
 	logging.basicConfig(level=logging.DEBUG)
 
 	cur_path = os.getcwd()
-
 	data_path = os.path.join(cur_path, 'data')
-
 	json_path = os.path.join(cur_path, 'data.json')
 
 	all_links = get_links_from_files(data_path)
 
+	sorted_names = sorted(all_links.keys(), key=str.lower)
+
+	pairs = [(name, all_links[name]) for name in sorted_names]
+
 	with open(json_path, 'w') as w:
-		json.dump(dict(links=all_links), w)
+		json.dump(dict(links=pairs), w)

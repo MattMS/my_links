@@ -10,8 +10,10 @@ html(lang="en")
 
 	body
 		.container
-			input#search_inp(name="q")
+			//-input#search_inp(autofocus, name="q")
 
 			ul
-				each link, title in links
+				each pair in links
+					- link = pair[1]
+					- title = pair[0]
 					li: a(href=link)= title
