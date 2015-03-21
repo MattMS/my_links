@@ -1,0 +1,2 @@
+link=https://lmms.io/documentation/Manual
+tags=docs user

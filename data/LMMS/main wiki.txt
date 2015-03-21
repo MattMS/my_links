@@ -1,0 +1,3 @@
+link=https://lmms.io/wiki/index.php?title=Main_Page
+note=Alternate view (adds MediaWiki border) to main docs.
+tags=docs user
