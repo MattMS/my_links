@@ -1,1 +1,1 @@
-tags=audio
+tags=audio C++ GNU-GPL Qt
