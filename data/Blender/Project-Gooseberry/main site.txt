@@ -1,1 +1,1 @@
-link=http://gooseberry.blender.org/
+link=https://gooseberry.blender.org/
