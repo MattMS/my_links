@@ -62,10 +62,10 @@ if '__main__' == __name__:
 	logging.basicConfig(level=logging.DEBUG)
 
 	cur_path = os.getcwd()
-	data_path = os.path.join(cur_path, 'data')
+	links_path = os.path.join(cur_path, 'to')
 	json_path = os.path.join(cur_path, 'data.json')
 
-	all_links = get_links_from_files(data_path)
+	all_links = get_links_from_files(links_path)
 
 	sorted_names = sorted(all_links.keys(), key=str.lower)
 
