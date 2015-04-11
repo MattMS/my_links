@@ -1,0 +1,28 @@
+{
+  "name": "my_links",
+  "version": "0.1.0",
+  "description": "Links I find useful.",
+  "main": "compile.coffee.md",
+  "scripts": {
+    "build_html": "jade --obj data.json index.jade",
+    "build_json": "python3 compile.py",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MattMS/my_links.git"
+  },
+  "keywords": [
+    "links"
+  ],
+  "author": "Matt McKellar-Spence",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MattMS/my_links/issues"
+  },
+  "homepage": "https://github.com/MattMS/my_links",
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "jade": "^1.9.2"
+  }
+}
