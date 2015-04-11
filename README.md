@@ -1,3 +1,3 @@
 # My links
 
-Links to various sites I like.
+Links to sites I find useful.
