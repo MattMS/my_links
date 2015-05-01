@@ -1,0 +1,1 @@
+link=https://github.com/altercation/vim-colors-solarized
